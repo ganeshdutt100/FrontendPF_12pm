@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* ul{
             display: flex;
             justify-content: center;
             justify-content: start;
@@ -13,18 +17,68 @@
             justify-content: space-around;
             justify-content: space-between;
             justify-content: space-evenly;
-            /* gap: 20px; */
+            
             list-style-type: none;
+        } */
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+            padding: 20px ;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+        .sec1{
+            display: flex;
+            align-items: start;
+            align-items: center;
+            /* align-items: end; */
+            padding: 20px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px  20px;
+        }
+
+        .sec1 img{
+            width: 300px;
         }
     </style>
 </head>
 <body>
-    <ul>
+    <!-- <ul>
         <li>Home</li>
         <li>About</li>
         <li>Contact</li>
         <li>Services</li>
         <li>Project</li>
-    </ul>
+    </ul> -->
+
+    <nav>
+        <div class="logo">
+            LOGO
+        </div>
+
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Project</li>
+        </ul>
+    </nav>
+    <div class="sec1">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veniam, deserunt quibusdam quod a sunt atque voluptate asperiores reiciendis. Quod eligendi sint iure optio quibusdam, voluptatum aperiam itaque nostrum animi!</p>
+            <button>Click me</button>
+        </div>
+        <img src="https://img.freepik.com/free-psd/glowing-3d-heart_23-2151868748.jpg?t=st=1756374282~exp=1756377882~hmac=8e21937d6249f9f35e85db5dff6a2896462ebec283b21cb0d7220b4c8948608d&w=1480" alt="">
+    </div>
 </body>
 </html>
