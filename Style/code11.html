@@ -25,12 +25,29 @@
     .bar{
         display: none;
     }
+
+.heroSection{
+    display: flex;
+    margin-top: 20px;
+}
+    .heroSection img{
+        width: 300px;
+    }
+
+    /* phone */
     @media only screen and (max-width:500px) {
         ul{
             display: none;
         }
         .bar{
             display: block;
+        }
+
+        .heroSection{
+            flex-direction: column-reverse;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
         }
     }
     </style>
@@ -50,5 +67,15 @@
                 <i class="fa-solid fa-bars-staggered"></i>
             </div>
     </nav>
+
+    <div class="heroSection">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, voluptatem fugiat facilis minima consectetur, inventore est nam assumenda autem voluptate voluptates earum atque excepturi commodi ad voluptas repudiandae aspernatur ipsa?</p>
+            <button>Click me</button>
+        </div>
+
+        <img src="https://ganeshdutt.netlify.app/newImgGanesh3Circle1.jpg" alt="">
+    </div>
 </body>
 </html>
