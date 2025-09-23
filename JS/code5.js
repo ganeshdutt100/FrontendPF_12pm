@@ -12,3 +12,40 @@
 
 
 
+
+// function expression
+
+// let value  =  function(){
+//     console.log("Hello World ");
+    
+// }
+// value();
+
+
+// let addNumber =  function(a , b){
+//     return console.log(a +b);
+    
+// }
+// addNumber(10,20);
+
+
+// IIFE
+
+// (function(){
+// console.log("IIFE");
+
+// })
+// ()
+
+
+// Arrow Function   
+
+//  let arrowFun = () => console.log("I a Arrow function ");
+//  let arrowFun = () => {
+//     alert("Hello Guys ")
+//     console.log("I a Arrow function ");
+// }
+
+//  arrowFun()
+ 
+
