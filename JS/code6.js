@@ -37,20 +37,30 @@ console.log("Code 6");
 // console.log(min);
 
 
-let course  = {
-    name : "JS",
-getCourseName  : function(){
-    return this.name;
-}
-}
+// let course  = {
+//     name : "JS",
+// getCourseName  : function(){
+//     return this.name;
+// }
+// }
 
-let course2 = {
-    name :  "React.js"
-}
+// let course2 = {
+//     name :  "React.js"
+// }
 
-// console.log(course.getCourseName());
-// console.log(course2.getCourseName());
+// // console.log(course.getCourseName());
+// // console.log(course2.getCourseName());
 
-let value =   course.getCourseName;
-let newValue  = value.bind(course2);
-console.log(newValue());
+// let value =   course.getCourseName;
+// console.log(value);
+
+// let newValue  = value.bind(course2);
+// console.log(newValue());
+
+// let a = 89;
+// console.log(typeof a.toString());
+
+
+// let value  = "Ganesh Dutt"
+// console.log(typeof Number(value));
+
