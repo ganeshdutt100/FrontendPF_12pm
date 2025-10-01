@@ -73,15 +73,19 @@ while (play) {
     (userChoice === "paper" && computerChoice === "rock")
   ) {
     alert(
-      "You win!",
-      "userChoice :  " + userChoice,
-      " and computerChoice :  " + computerChoice
+      "You win! " +
+        "userChoice :  " +
+        userChoice +
+        " and computerChoice :  " +
+        computerChoice
     );
   } else {
     alert(
-      "Computer win!",
-      "computerChoice :  " + computerChoice,
-      " and userChoice :  " + userChoice
+      "Computer win! " +
+        "computerChoice :  " +
+        computerChoice +
+        " and userChoice :  " +
+        userChoice
     );
   }
 }
