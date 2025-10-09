@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: rgb(21, 21, 21);
+            color: white;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: rgb(1, 1, 32);
+            padding: 20px;
+        }
+
+        input {
+            border: 1px solid white;
+            background-color: rgb(21, 21, 21);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 1px 7px 1px white;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="input1" placeholder="Enter your first Number ">
+        <input type="text" id="operator" placeholder="Enter your operator ">
+        <input type="text" id="input3" placeholder="Enter your second Number ">
+        <input id="result" placeholder="Result">
+        <button onclick="calculator()">Add</button>
+    </div>
+    <script>
+        let num = document.querySelector('#input1')
+        let operator = document.querySelector('#operator')
+        let num3 = document.querySelector('#input3')
+
+        function calculator() {
+            let newNum1 = Number(num.value)
+            let newOperator = operator.value
+            let newNum2 = Number(num3.value)
+            let result = document.querySelector('#result')
+
+
+            switch (newOperator) {
+                case '+':
+                    result.value = newNum1 + newNum2;
+                    break;
+                case '-':
+                    result.value = newNum1 - newNum2;
+                    break;
+                case '*':
+                    result.value = newNum1 * newNum2;
+                    break;
+                case '/':
+                    if (newNum2 === 0) {
+                        result.value = "Cannot divide by zero";
+                        break;
+                    }
+                    result.value = newNum1 / newNum2;
+                    break;
+                default:
+                    result.value = "Invalid input"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
