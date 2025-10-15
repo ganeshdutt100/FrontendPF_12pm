@@ -5,29 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="calculator">
-        <input type="text">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>+</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
-        <button>/</button>
+        <input type="text" id="display" readonly>
+        <br>
 
+        <button onclick="pressFunction('7')">7</button>
+        <button onclick="pressFunction('8')">8</button>
+        <button onclick="pressFunction('9')">9</button>
+        <button onclick="pressFunction('+')">+</button><br>
+
+        <button onclick="pressFunction('4')">4</button>
+        <button onclick="pressFunction('5')">5</button>
+        <button onclick="pressFunction('6')">6</button>
+        <button onclick="pressFunction('-')">-</button><br>
+
+        <button onclick="pressFunction('1')">1</button>
+        <button onclick="pressFunction('2')">2</button>
+        <button onclick="pressFunction('3')">3</button>
+        <button onclick="pressFunction('*')">*</button><br>
+
+        <button onclick="pressFunction('0')">0</button>
+        <button onclick="pressFunction('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+        <button class="clear" onclick="clearDisplay()">C</button>
     </div>
+
+
+
+    <script>
+
+
+        let input = []
+
+        function pressFunction(value) {
+            input.push(value)
+            document.getElementById('display').value = input.join("")
+
+        }
+
+        function calculate() {
+            let result = 0;
+            let operator = "+";
+
+            for (let i = 0; i < input.length; i++) {
+                let value = input[i];
+                if (value === "+" || value === "-" || value === "*" || value === "/") {
+                    operator = value;
+                } else {
+                    let num = Number(value);
+                    if (operator === "+") result += num
+                    else if (operator === "-") result -= num
+                    else if (operator === "*") result *= num
+                    else if (operator === "/") result /= num
+                }
+            }
+
+            document.getElementById('display').value = result;
+            input = []
+
+
+        }
+
+        function clearDisplay() {
+            input = []
+            document.getElementById('display').value = ""
+
+        }
+    </script>
 </body>
 
 </html>
