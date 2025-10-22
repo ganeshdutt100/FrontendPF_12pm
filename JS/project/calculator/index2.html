@@ -1,0 +1,73 @@
+!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <br>
+
+        <button onclick="pressFunction('7')">7</button>
+        <button onclick="pressFunction('8')">8</button>
+        <button onclick="pressFunction('9')">9</button>
+        <button onclick="pressFunction('+')">+</button><br>
+
+        <button onclick="pressFunction('4')">4</button>
+        <button onclick="pressFunction('5')">5</button>
+        <button onclick="pressFunction('6')">6</button>
+        <button onclick="pressFunction('-')">-</button><br>
+
+        <button onclick="pressFunction('1')">1</button>
+        <button onclick="pressFunction('2')">2</button>
+        <button onclick="pressFunction('3')">3</button>
+        <button onclick="pressFunction('*')">*</button><br>
+
+        <button onclick="pressFunction('0')">0</button>
+        <button onclick="pressFunction('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+        <button class="clear" onclick="clearDisplay()">C</button> <br>
+        <button class="clear" onclick="backspace()">X</button>
+    </div>
+
+
+
+    <script>
+
+
+        let input = ""
+        // "123456+786"
+
+        function pressFunction(value) {
+            input += value
+            document.getElementById('display').value = input
+
+
+        }
+        function calculate() {
+            let result = eval(input)
+            document.getElementById('display').value = result
+            input = result.toString();
+
+        }
+
+        function clearDisplay() {
+            input = []
+            document.getElementById('display').value = ""
+
+        }
+        function backspace() {
+            input = input.slice(0, -1)
+            document.getElementById('display').value = input
+
+        }
+    </script>
+</body>
+
+</html>
