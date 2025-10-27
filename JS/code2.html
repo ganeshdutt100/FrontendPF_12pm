@@ -5,10 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: lightblue;
+        }
+
+        .card img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="card">
+        <img src="" alt="" id="userImage">
+        <h2 id="userName"></h2>
+        <p id="userProfession"></p>
+    </div>
+    <script>
+        const user = {
+            name: "Rahul",
+            age: 23,
+            profession: "Frontend Developer",
+            image: "https://images.unsplash.com/photo-1668713701571-1d1cbcefe7bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000"
+        }
 
+        document.getElementById('userImage')
+
+        document.getElementById('userName').textContent = user.name
+
+    </script>
 </body>
 
 </html>
