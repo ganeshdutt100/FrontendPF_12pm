@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ToDoList from './components/ToDoList'
+import UseEffect from './components/UseEffect'
+import Userprofile from './components/Userprofile'
 
 function App() {
   const [count, setCount] = useState(20)
@@ -17,7 +19,10 @@ function App() {
         </button> 
 
       </div>*/}
-      <ToDoList />
+      {/* <ToDoList /> */}
+      {/* <UseEffect /> */}
+      <Userprofile userId={2} />
+
 
     </>
   )
