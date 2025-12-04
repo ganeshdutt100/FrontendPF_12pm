@@ -12,7 +12,7 @@ const Cart = () => {
             {cart.length === 0 ? (
                 <p>No Item in Cart</p>
             ) : (
-                Cart.map((item) => <CartItem key={item.id} item={item} />)
+                cart.map((item) => <CartItem key={item.id} item={item} />)
             )}
         </div>
     )
